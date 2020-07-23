@@ -21,13 +21,13 @@ Matlab code of the algorithms and the associated experiments corresponding to th
 
   The pure epsMag-ES algorithm consists of the following modules:
 
-* __epsMAgES.m__ - Main component of the epsMAg-Es algorithm (based on the MA-ES) and six related algorithm variants
-   * __epsMAES.m__
-   * __epsMAgESnl.m__
-   * __epsMAgESwo.m__
-   * __epsSAgES.m__
-   * __lexMAgES.m__
-   * __lexMAES.m__
+* __epsMAgES.m__ - Main component of the epsMAg-ES algorithm (based on the MA-ES) and six related algorithm variants
+   * __epsMAES.m__ -- variant omitting the Jacobian-based repair step
+   * __epsMAgESnl.m__ -- variant w/o mutation strength limitation
+   * __epsMAgESwo.m__ -- variant omitting the back-calculation
+   * __epsSAgES.m__ -- variant omitting the transformation matrix update
+   * __lexMAgES.m__ -- variant disregarding the epsilon-level ordering
+   * __lexMAES.m__ -- variant disregarding the epsilon-level ordering and the Jacobian-based repair
    
 * __eps_sort.m__ - Sorting routine for ranking candidate solutions w.r.t. the epsilon-level ordering (setting epsilon to zero results in a lexicographic ordering)
 * __eps_rank.m__ - Subroutine of __eps_sort__
@@ -55,7 +55,7 @@ Matlab code of the algorithms and the associated experiments corresponding to th
 * input   - Matlab structure array specifying all necessary strategy parameters of the algorithm (population sizes, initial mutation strength, learning rates, etc.)
 * CEC_fun_o - CEC benchmark specific; some modifications will be necessary to run the algorithm on your own problems
 
-For details refer to the file __Main_epsMAgES.m__  or to the paper.
+For further details refer to the file __Main_epsMAgES.m__  or to the paper.
 
   During execution, __epsMAg-ES.m__ repeatedly calls up the subroutines
   > __eps_sort.m__, 
@@ -70,4 +70,13 @@ that do not need to be individually configured.
 * global_best - Structure array containing information of the best candidate solution observed during the algorithm run.
 * dyn - Cell array providing information of strategy specific dynamics logged during the run. Capturing these data might be ommitted to reduce execution time.
 
+ 7. ### Post-processing:
  
+The subfolder PostProcessing contains the Matlab scripts used to produce the tables and figures displayed in the submitted paper.
+
+* **build table**
+   Builds a table (and a corresponding csv-file) of the performace statistics in the style of the CEC2017 constrained benchmark guidelines, c.f. Table 17 in the suplementary material.
+* **plotDyn**
+   Creates the plots for comparison of the algorithm dynamics, e.g. Figures 2 and 3 in Section 5
+* **WSRTestBasedRanking**
+   Ranks the algorithm variants according to the mean and median performance indicators. This ranking is additionally supported by significance testing (Wilcoxon Signed Rank test), e.g. refer to the Tables in Section 4.
