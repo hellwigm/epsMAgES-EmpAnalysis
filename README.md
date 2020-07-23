@@ -21,9 +21,18 @@ Matlab code of the algorithms and the associated experiments corresponding to th
 
   The pure epsMag-ES algorithm consists of the following modules:
 
-* __epsMAgES.m__ - Main component of the epsMAg-Es algorithm (based on the MA-ES)
+* __epsMAgES.m__ - Main component of the epsMAg-Es algorithm (based on the MA-ES) and six related algorithm variants
+   ** --epsMAES.m__
+   ** --epsMAgESnl.m__
+   ** --epsMAgESwo.m__
+   ** --epsSAgES.m__
+   ** --lexMAgES.m__
+   ** --lexMAES.m__
+   
 * __eps_sort.m__ - Sorting routine for ranking candidate solutions w.r.t. the epsilon-level ordering (setting epsilon to zero results in a lexicographic ordering)
 * __eps_rank.m__ - Subroutine of __eps_sort__
+* __lex_sort.m__ - Sorting routine for ranking candidate solutions w.r.t. the lexicographic ordering
+* __lex_rank.m__ - Subroutine of __eps_sort__
 * __keep_range.m__ - Box-constraint handling method (reflection into the box)
 * __gradientMutation.m__ - Implementation of the gradient-based repair step
 
