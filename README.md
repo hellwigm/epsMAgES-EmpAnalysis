@@ -81,6 +81,10 @@ The subfolder PostProcessing contains the Matlab scripts used to produce the tab
 * **build table**
    Builds a table (and a corresponding csv-file) of the performace statistics in the style of the CEC2017 constrained benchmark guidelines, c.f. Table 17 in the suplementary material.
 * **plotDyn**
-   Creates the plots for comparison of the algorithm dynamics, e.g. Figures 2 and 3 in Section 5
-* **WSRTestBasedRanking**
-   Ranks the algorithm variants according to the mean and median performance indicators. This ranking is additionally supported by significance testing (Wilcoxon Signed Rank test), e.g. refer to the Tables in Section 4.
+   Creates the plots for comparison of mean dynamics obtained by averaging over all 25 runs
+* **plotDynMedian**
+   Creates the plots for comparison of the median algorithm dynamics in Section 5, e.g. Figures 2 and 3
+* **WSRTest_MedianMeanRanking**
+   Ranks the algorithm variants according to the median and mean performance indicators. This ranking is additionally supported by significance testing (Wilcoxon Signed Rank test), e.g. refer to the Tables in Section 4.
+* **WSRTest_TotalRanking**
+   Aggregates the median and mean ranking and adds the realtive runnng times in case of insignificant differences of two algorithms realizations
