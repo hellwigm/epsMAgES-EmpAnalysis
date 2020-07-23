@@ -37,7 +37,10 @@ Matlab code of the algorithms and the associated experiments corresponding to th
 * __gradientMutation.m__ - Implementation of the gradient-based repair step
 
   The additional files correspond to the benchmark suite the algorithm was first tested on. The files are included within this repository to provide a demonstration in a running environment. NOTICE: The file __Main_epsMAgES.m__ includes the standard strategy parameter recommendations in the structure array __input__.
-* __Main_epsMAgES.m__ - Executable for running the epsMAg-ES on the correspondinng benchmarking problems
+* __Main_Experiment.m__ - Executable for running the seven epsMAg-ES algorithm variants on the constrained CEC 2017 benchmarking problems
+   * For each algorithm variant, the script will build a single folder that includes one mat-file per constrained problems.
+      * In total, 28 mat-files will be generated in each dimension.
+      * A mat-file contains information about the dynamical algorithm behavior as well as the corresoponding statistical performance results.
 * __build_stats.m__ - Postprocessing routine that builds the statistcs to be reported to the CEC 2017 and 2018 competition
 * __CEC2017.m__ - Constrained functions specified for the CEC 2017 and 2018 competitions
 
