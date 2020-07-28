@@ -43,7 +43,7 @@ Matlab code of the algorithms and the associated experiments corresponding to th
       * A mat-file contains information about the dynamical algorithm behavior as well as the corresoponding statistical performance results.
 * __build_stats.m__ - Postprocessing routine that builds the statistcs to be reported to the CEC 2017 and 2018 competition
 * __CEC2017.m__ - Constrained functions specified for the CEC 2017 and 2018 competitions
-   * Accompanied with several probelm definition files ('Function1.mat' to Function 11.mat', and 'ShiftAndRotation.mat')
+   * Accompanied with several problem definition files ('Function1.mat' to Function 11.mat', and 'ShiftAndRotation.mat')
 
 6.  ### Description:
 
